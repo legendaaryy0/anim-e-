@@ -1,0 +1,406 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+header{
+    display: flex;
+    height: 70px;
+    background-color: #a7a7a75b;
+    backdrop-filter: blur(10px);
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    font-weight: bolder;
+}
+
+header h1{
+    font-size: 40px;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+
+}
+.search-box img{
+    width: 20px;
+    background-color: lightgray;
+    padding: 5px 10px;
+    margin-right: -1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.search-box input{
+    padding: 7.5px 10px;
+    background-color: lightgray;
+    border: none;
+    outline: none;
+    border-top-right-radius: 10px;
+    
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+nav a{
+    text-decoration: none;
+    color: lightgray;
+    font-size: 20px;
+    font-size: 700;
+    padding: 0 10px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.699);
+    transition: 0.4s;
+}
+nav a:hover{
+    color: rgb(255, 29, 29);
+}
+.carousel{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    margin-top: -70px;
+
+}
+.carousel>div>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.carousel>div>div>img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+.carousel>div>div>div{
+    position: absolute;
+    top: 10%;
+    width: 1140px;
+    max-width: 80%;
+    left: 10%;
+    transform: translateX(-50);
+    padding-right: 30%;
+    box-sizing: border-box;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.699);
+}
+.content h1{
+    font-size: 65px;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+.details{
+    display: flex;
+    text-wrap: nowrap;
+    margin-bottom: -20px;
+}
+.details p{
+    border-right:2px solid white;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffcc00;
+    padding: 0 10px;
+}
+.details p:last-child{
+    border: none;
+}
+.content h4{
+    max-width: 400px;
+    font-size: 17px;
+    line-height: 25px;
+    margin: 40px 0;
+}
+.carousel>.buttons{
+    display: flex;
+}
+.download-btn{
+    position: relative;
+    bottom: 30px;
+    width: 150px;
+    padding: 12px 0;
+    font-weight: bold;
+    border: none;
+    background-color: #ffcc00;
+    color: black;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+.trailer-btn{
+    position: relative;
+    bottom: 30px;
+    width: 150px;
+    padding: 12px 0;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.buttons button:hover{
+    opacity: 0.7;
+    box-shadow: 5px 5px 15px black;
+}
+.vid-box{
+    position: relative;
+    bottom: 30px;   
+    border: 5px solid #ffcc00;
+    width: 200px;
+    height: 110px;
+    border-radius: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px black;
+}
+.vid-box video{
+    width: 250px;
+    height: 140px;
+}
+
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+    background-color: rgba(211, 211, 211, 0.146);
+    backdrop-filter: blur(10%);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+
+    
+
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50px;
+    mix-blend-mode: lighten ;
+}
+.thumbnail .item .thum-content{
+    position: absolute;
+    top: 175px;
+    left: 40px;
+    right: 25px;
+}
+
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 35%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: lightgray;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.arrows button:hover{
+    background-color: rgb(133, 133, 133);
+    box-shadow: 0 0 15px rgb(34, 34, 34);
+}
+
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .content{
+    filter: blur(20%);
+    opacity: 0;
+    animation: showContent 1.5s   1s linear 1 forwards;
+}
+@keyframes showContent {
+    to{
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.carousel .next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 100%;
+    animation: showImage 1.5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext 1.5s linear 1 forwards;
+}
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 200;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outFrame 0.1s linear 1 forwards;
+}
+
+@keyframes outFrame { 
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 50px;
+    }
+}
+.carousel.prev .list .item:nth-child(2) .content{
+    animation: contentOut 1.5s linear 1 forwards;
+
+}
+@keyframes contentOut{
+    to{
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+
+.time{
+    position: absolute;
+    z-index: 999;
+    width: 0;
+    height: 5px;
+    background-color: #ff0040;
+    left: 0;
+    top: 0;
+}
+.time{
+    animation: runningTime 2s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{width: 100%;}
+    to{width: 0%;}
+}
+
+@media  screen and (max-width:700px) {
+    .carousel .list .item .content{
+        padding: 0;
+    }
+    .carousel .list .item .content h1{
+        font-size: 50px;
+    }
+    .details p{
+        font-size: 17px;
+    }
+    .content{
+        margin: 10px 0;
+    }
+    nav{
+        display: none;
+    }
+    .vid-box{
+        position: relative;
+        top: 40px;
+        width:170px ;
+        height: 100px;
+    }
+    .header{
+        padding: 0 10px;
+    }
+    .content{
+        top: 10%;
+    }
+    .thumbnail{
+        top: 75%;
+        left: 85%;
+    }
+    .arrows{
+        left: 50%;
+    }
+    .download-btn{
+        position: relative;
+        top: 30px;
+        margin: 10px;
+       
+    }
+    .trailer-btn{
+        position: relative;
+        top: 30px;
+
+    
+    }
+    h4{
+        font-size: x-small;
+    }
+    .content h4{
+        margin: 10px;
+        font-size: 10px;
+    }
+    .vid-box video{
+        width:170px ;
+        height: 100px;
+    }
+}
+.h4{
+    background-color: rgba(0, 0, 0, 0.699); 
+    filter: blur(50%);
+    border-radius: 10px;
+    padding: 0px;
+}
+.details{
+    background-color: rgba(0, 0, 0, 0.699);
+    border-radius: 10px;
+}
